@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/* =====================================================
+                created at 2020.03.05
+======================================================== */
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #E3E1EF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1,
+.h1 {
+    font-size: 2.25rem;
+}
+
+h2,
+.h2 {
+    font-size: 1.8rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.575rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.35rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.125rem;
+}
+
+h6,
+.h6 {
+    font-size: 0.9rem;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@font-face {
+    font-family: helvetica_neue;
+    src: url(/css/fonts/HelveticaNeueLt.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: helvetica_neue;
+    src: url(/css/fonts/HelveticaNeueMed.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: helvetica_neue;
+    src: url(/css/fonts/HelveticaNeueBd.ttf);
+    font-weight: 900;
+}
+
+body {
+    font-family: "helvetica_neue";
+}
+
+.heroSec {
+    min-height: calc(100vh);
+    background: url(/images/heroBg.jpg) center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.heroSec .heading {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.heroSec .heading h1 {
+    font-weight: 300;
+}
+
+.heroSec .heading span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heroSec .heading:after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #8233D4;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.heroSec .options {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.heroSec .options li {
+    list-style: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+.heroSec .options li.google a {
+    padding: 10px 15px;
+    min-width: 80px;
+    background: #d43440;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.heroSec .options li.facebook a {
+    padding: 10px 15px;
+    min-width: 80px;
+    background: #748fd4;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+@media (max-width: 398px){
+    .heroSec .options li.google a {
+        margin-bottom: 20px;
+    }
+}
+
+.heroSec .options li a:hover {
+    text-decoration: none;
+}
+
+.heroSec .options li.google a:hover {
+    background: #ff1f42;
+}
+
+.heroSec .options li.facebook a:hover {
+    background: #3b5de1;
+}
+
+
+

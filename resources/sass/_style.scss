@@ -1,0 +1,518 @@
+// @font-face {
+//     font-family: helvetica_neue;
+//     src: url(/css/fonts/HelveticaNeueLt.ttf);
+//     font-weight: 100;
+// }
+// @font-face {
+//     font-family: helvetica_neue;
+//     src: url(/css/fonts/HelveticaNeueLight.ttf);
+//   }
+// @font-face {
+//     font-family: helvetica_neue;
+//     src: url(/css/fonts/HelveticaNeueBd.ttf);
+//     font-weight: 900;
+// }
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    // font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+.navbar{
+    background: white;
+    .navbar-nav{
+        .nav-link{
+            text-transform: uppercase;
+            color: #111111;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+}
+.heroSec{
+    min-height: calc(100vh - 55px);
+    background: url(/images/heroBg.jpg) center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .birdNestL,.NestL{
+        // content: "";
+        display: block;
+        width: 352px;
+        height: 250px;
+        position: absolute;
+        z-index: 1;
+        background: url(/images/withHawkTreehouseL.png) no-repeat left center;
+        background-size: contain;
+        top: 10px;
+        left: 0px;
+        transform: scale(0.8);
+        transform-origin: left top;
+    }
+    .NestL{
+        background: url(/images/treehouseL.png) no-repeat left center;
+    }
+    .birdNestR{
+        // content: "";
+        display: block;
+        width: 352px;
+        height: 250px;
+        position: absolute;
+        z-index: 1;
+        background: url(/images/withHawkTreehouseR.png) no-repeat left center;
+        background-size: contain;
+        top: 10px;
+        left: auto;
+        right: 0;
+        transform: scale(0.8);
+        transform-origin: right top;
+    }
+    .heading{
+        position: relative;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        h1{
+            font-weight: 300;
+        }
+        span{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        &:after{
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: $purple;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .SubHead{
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    .options{
+        padding-left: 0;
+        li{
+            list-style: none;
+            display: inline;
+            margin-right: 10px;
+            a{
+                padding:2px 5px;
+                min-width: 80px;
+                background: $purple;
+                color: #fff;
+                text-align: center;
+                border-radius: 3px;
+                display: inline-block;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:nth-child(1) {
+                a:hover{
+                    background: $lightBlue;
+                }
+            }
+            &:nth-child(2) {
+                a:hover{
+                    background: $darkPink;
+                }
+            }
+            &:nth-child(3) {
+                a:hover{
+                    background: $lightGreen;
+                }
+            }
+            &:nth-child(4) {
+                a:hover{
+                    background: $purple;
+                }
+            }
+        }
+    }
+}
+.heroSec.aniView.rent{
+    background: none!important;
+    .container{
+        background: url(/images/rent-hawk-new.png) no-repeat center top;
+        min-height: 550px;
+        padding-top: 15.5rem;
+        padding-bottom: 1rem;
+        transition: all 0.3s ease-in-out;
+        .question{
+            text-align: center;
+            font-weight: normal;
+            color: $dark;
+            height: 55px;
+            width: 60%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1rem;
+            font-size: 1rem;
+        }
+        .answers{
+            padding-top: 2rem;
+            text-align: center;
+            height: 260px;
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1%;
+            form{
+                width: 100%;
+            }
+            .row{
+                padding-bottom: 0.5rem;
+            }
+            .radiobtn{
+                width: 100%;
+                // max-width: 200px; 
+                // font-size: 0.8rem;
+            }
+        }
+    }
+    .input-group{
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        .input-group-text{
+            color: $lightGreen;
+            background-color: #fff;
+            border-color: $lightGreen;
+        }
+        .form-control{
+            border-color: $lightGreen;
+            border-left: none;
+        }
+        .btn-primary{
+            background-color: $lightGreen;
+            border-color: $lightGreen;
+        }
+    }
+}
+.heroSec.aniView.rent.blue{
+    .container{
+        background: url(/images/rent-hawk-new-blue.png) no-repeat center top;
+    }
+}
+.heroSec.normalView.rent{
+    background-size: cover;
+    background-position: center;
+    .birdNestL,.birdNestR,.NestL{
+        display: none;
+    }
+    &::before{
+        display: none;
+    }
+    .container{
+        // background: url(/images/rent-hawk-new.png) no-repeat center top;
+        min-height: 550px;
+        padding-top: 10vh;
+        padding-bottom: 1rem;
+        position: relative;
+        // &::before{
+        //     content: "";
+        //     width: 50%;
+        //     background: #fff;
+        //     height: 320px;
+        //     display: block;
+        //     position: absolute;
+        //     left: 50%;
+        //     margin-left: -25%;
+        //     margin-top: -20px;
+        // }
+        .col-5{
+            background-color: #fff;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .question{
+            text-align: center;
+            font-weight: normal;
+            color: $dark;
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1rem;
+            font-size: 1rem;
+        }
+        .answers{
+            padding-top: 2rem;
+            text-align: center;
+            height: auto;
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1%;
+            form{
+                width: 100%;
+            }
+            .row{
+                padding-bottom: 0.5rem;
+            }
+            .radiobtn{
+                width: 100%;
+                // max-width: 200px; 
+                font-size: 13px;
+            }
+        }
+    }
+    .input-group{
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        .input-group-text{
+            color: $lightGreen;
+            background-color: #fff;
+            border-color: $lightGreen;
+        }
+        .form-control{
+            border-color: $lightGreen;
+            border-left: none;
+        }
+        .btn-primary{
+            background-color: $lightGreen;
+            border-color: $lightGreen;
+        }
+    }
+}
+.btn-success{
+    background-color: $lightGreen;
+    min-width: 150px;
+}
+.hilight{
+    min-width: 100px;
+    height: 24px;
+    background: rgb(188, 224, 194);
+    color: $green;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    padding:0 5px;
+}
+.radiobtn {
+    position: relative;
+    display: inline-block;
+    transform: scale(1);
+    transition:all 0.3s cubic-bezier(0.49, -0.34, 0.59, 1.3);
+    font-size: 13px;
+    label {
+        justify-content: center;
+        text-align: center;
+        // min-width: 150px !important;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        color: #444;
+        border-radius: 5px;
+        padding: 4px 20px;
+        border: 2px solid #ffffff;
+        margin-bottom: 5px;
+        cursor: pointer;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        i{
+            position: absolute;
+            left: 5px;
+            color: $lightGreen;
+        }
+        span{
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+            background: rgba(63, 249, 91, 0.3);
+            color: $green;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 50%;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        &:hover{
+            border-color: $lightGreen;
+        }
+        span.icon{
+            margin-bottom: 0;
+            width: 32px;
+            height: 32px;
+            i{
+                line-height: 32px;
+                font-size: 24px;
+                left: 2px;
+            }
+        }
+    }
+    input[type="radio"] {
+        display: none;
+        position: absolute;
+        width: 100%;
+        appearance: none;
+    }
+    input[type="checkbox"] {
+        display: none;
+        position: absolute;
+        width: 100%;
+        appearance: none;
+    }
+    input[type="radio"]:checked + label {
+        background: #ffffff;
+        animation-name: blink;
+        animation-duration: 1s;
+        border-color: $lightGreen;
+    }
+    input[type="checkbox"]:checked + label {
+        background: #ffffff;
+        animation-name: blink;
+        animation-duration: 1s;
+        border-color: $lightGreen;
+    }
+}
+.radiobtn.popOut{
+    transform: scale(1.1);
+}
+
+
+.checkboxWrap{
+    max-height:150px; 
+    overflow:auto;
+    background: #fff;
+    padding: 10px;
+    list-style: none;
+    li{
+        input[type=checkbox] {
+            vertical-align: middle;
+            float: right;
+        }
+        label {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px dashed #eee;
+        }
+    }
+}
+.toggleView{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99;
+    input[type=checkbox]{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    label {
+        cursor: pointer;
+        width: 200px;
+        height: 34px;
+        background: #fff;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: $lightGreen;
+    }
+    
+    label:after {
+        content: 'Animation';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 90px;
+        height: 25px;
+        background: $lightGreen;
+        border-radius: 90px;
+        transition: 0.3s;
+        color: #fff;
+        text-align: center;
+        line-height: 26px;
+    }
+    
+    input:checked + label {
+        background: #fff;
+    }
+    
+    input:checked + label:after {
+        content: 'Normal';
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: 130px;
+    }
+}
+
+.input-group{
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    .input-group-text{
+        color: $purple;
+        background-color: #fff;
+        border-color: $purple;
+    }
+    .form-control{
+        border-color: $purple;
+        border-left: none;
+    }
+    .btn-primary{
+        background-color: $purple;
+        border-color: $purple;
+    }
+}
+
+
+
+
+.footer{
+    display: none;
+    background: white;
+    padding: 1rem 0;
+    ul.fMenu{
+        padding: 0;
+        li{
+            list-style: none;
+            display: inline-block;
+            padding-right: 1rem;
+            a{
+                color: #111111;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .social{
+        a{
+            height: 32px;
+            width: 32px;
+            background: $purple;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 32px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
